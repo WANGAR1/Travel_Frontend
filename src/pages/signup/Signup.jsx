@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Signup.css';
 
 const Signup = () => {
   const [isLogin, setIsLogin] = useState(false); // State to track if it's a login or signup page
