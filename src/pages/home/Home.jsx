@@ -16,7 +16,7 @@ const Home = () => {
               Embark on an unforgettable journey with our experienced team of travel enthusiasts. From exotic destinations to cultural experiences, we offer the ultimate adventure for wanderers and explorers. Let your wanderlust guide you through a world of breathtaking landscapes and vibrant cultures.
             </p>
             <div className="d-flex mt-6">
-            <button type="button" className="btn btn-primary btn-animated" style={{ backgroundColor: 'white', color: '#FA7436', borderColor: '#FA7436', borderRadius: '25px', outline: 'none' }}>
+            <button type="button" className="btn btn-primary btn-animated" style={{ backgroundColor: 'white', color: '#FA7436', borderColor: '#FA7436', borderRadius: '20px', outline: 'none' }}>
   Discover Now
 </button>
 
