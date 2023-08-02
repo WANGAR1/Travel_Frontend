@@ -7,8 +7,8 @@ const Destination = () => {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API endpoint
-    fetch('/destinations')  // Update the API endpoint
+    // Fetching data from the API endpoint
+    fetch('/destinations')  //API endpoint to be updated accordingly 
       .then(response => response.json())
       .then(data => setDestinations(data))
       .catch(error => console.error(error));
