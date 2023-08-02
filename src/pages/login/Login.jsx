@@ -41,7 +41,7 @@ const Login = () => {
       <br />
       <br />
       <div id="login_form">
-        <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <h1 className="h3 mb-3 font-weight-normal">Login</h1>
         <br />
         <form onSubmit={handleSubmit}>
           <input

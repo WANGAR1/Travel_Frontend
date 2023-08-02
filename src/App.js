@@ -6,6 +6,9 @@ import Signup from './pages/signup/Signup';
 import About from './pages/about/About';
 import Destination from './pages/destination/Destination';
 import Packages from './pages/packages/Packages';
+import "./pages/login/Login.css";
+import './pages/signup/Signup.css';
+import './pages/about/About.css';
 
 const App = () => {
   return (

@@ -1,0 +1,52 @@
+body {
+    font-family: 'Arial', sans-serif; /* Use your preferred font-family */
+    background-color: #f5f5f5; /* Set the background color for the page */
+    
+  }
+  
+  /* Styles for the signup container */
+  #signup_form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 18px;
+    background-color: #ff6f0019; /* Transparent container */
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  /* Styles for the form elements */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type='text'],
+  input[type='email'],
+  input[type='password'] {
+    width: 100%;
+    margin-bottom: 8.5px;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  button {
+    background-color: #fa7436; /* Set button background color */
+    color: #fa7436;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+  }
+  
+  button:hover {
+    background-color: #f85c00; /* Darker color on hover */
+  }
+  
+  /* Error message style */
+  div[style*='color: red'] {
+    color: red;
+  }
+  
