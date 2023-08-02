@@ -14,16 +14,26 @@ const Destination = () => {
   }, []);
 
   return (
-    <Masonry breakpointCols={3} className="destination-masonry" columnClassName="destination-masonry-column">
-      {destinations.map(destination => (
-        <Link to={`/destination/${destination.id}`} key={destination.id} className="destination-link">
-          <div className="destination-item">
-            <img src={destination.image_url} alt={destination.location} className="destination-image" />
-            <div className="destination-name">{destination.location}, {destination.country}</div>
-          </div>
-        </Link>
-      ))}
-    </Masonry>
+    <div className="destination-page">
+      <h2 className="destination-title">Destinations</h2>
+      <p className="destination-description">
+      Embark on a journey of a lifetime with our premier travel agency.
+        Discover the world's most captivating destinations and immerse yourself
+        in unique cultures, breathtaking landscapes, and unforgettable experiences.
+        Choose among an extensive selection of alluring locations, each offering
+        its own blend of charm and enchantment. Your extraordinary journey starts here!
+      </p>
+      <Masonry breakpointCols={3} className="destination-masonry" columnClassName="destination-masonry-column">
+        {destinations.map(destination => (
+          <Link to={`/destination/${destination.id}`} key={destination.id} className="destination-link">
+            <div className="destination-item">
+              <img src={destination.image_url} alt={destination.location} className="destination-image" />
+              <div className="destination-name">{destination.location}, {destination.country}</div>
+            </div>
+          </Link>
+        ))}
+      </Masonry>
+    </div>
   );
 };
 
