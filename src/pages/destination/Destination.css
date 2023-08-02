@@ -1,0 +1,93 @@
+/* Styles for Destination component */
+.destination-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.destination-title {
+  font-size: 28px;
+  color: #FA7436;
+  margin-bottom: 10px;
+}
+
+.destination-description {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.masonry-grid {
+  display: flex;
+  margin-left: -20px;
+  width: auto;
+}
+
+.masonry-grid-column {
+  padding-left: 20px;
+  background-clip: padding-box;
+}
+
+.destination-link {
+  text-decoration: none;
+}
+
+.destination-item {
+  margin-bottom: 20px;
+  padding: 8px;
+  break-inside: avoid-column;
+  position: relative;
+  overflow: hidden;
+}
+
+.destination-image {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 8px; 
+  transition: transform 0.3s ease;
+}
+
+.destination-image:hover {
+  transform: scale(1.1);
+}
+
+.destination-name {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  background-color: #FA7436;
+  border-radius: 20px;
+}
+/* Styles for PackageDetails component */
+.package-details {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.package-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.package-description {
+  margin-bottom: 20px;
+}
+
+.book-now-button {
+  background-color: #FA7436;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.book-now-button:hover {
+  background-color: #E65A1E;
+}
