@@ -18,7 +18,7 @@ const TravelExperience = () => {
               {travelItem.title}
             </h2>
           </div>
-          <p className="dark:text-gray-100">
+          <p className="dark:text-black-100">
             {travelItem.description}
           </p>
         </div>
