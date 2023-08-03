@@ -10,7 +10,7 @@ import Contact from './pages/contact/Contact'
 import Header from './components/header/Header'; // Import the Header component
 import TravelExperience from './pages/travelexperience/TravelExperience';
 import BookingForm from './components/bookingform/BookingForm';
-//import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer'
 
 const App = () => {
   return (
@@ -29,7 +29,7 @@ const App = () => {
         {/* Add a 404 route if no match is found */}
         <Route path="*" element={<h1>404 - Not Found</h1>} />
       </Routes>
-     {/*<Footer />*/}
+      <div><Footer /></div>
     </div>
   );
 };
