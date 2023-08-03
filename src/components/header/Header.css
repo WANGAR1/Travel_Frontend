@@ -1,0 +1,24 @@
+
+.header-content--left {
+    display: grid;
+    grid-auto-flow: column;
+    inline-size: max-content;
+    place-content: center;
+}
+
+.brand-logo {
+    gap: var(--space-05);
+    padding: 0.25em 0.75em;
+    align-items: center;
+    display: inline-flex;
+}
+
+.brand-logo > svg {
+    fill: var(--brand-clr);
+}
+
+.logo-text {
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 500;
+}

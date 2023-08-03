@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Step 1: Import Link
 import './Packages.css'; // Import the CSS file
 import cardData from './cardData';
 
@@ -29,7 +30,7 @@ const Packages = () => {
           <p>Rating: {cardData.rating}</p>
 
           {/* Booking Button */}
-          <button className="booking-button">Book Now</button>
+          <Link to="/bookingform" className="booking-button">Book Now</Link>
         </div>
       ))}
     </div>
