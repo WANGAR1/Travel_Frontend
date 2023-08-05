@@ -1,12 +1,20 @@
 import React from 'react';
-import './About.css';
+import './About.css'; // Import the CSS file
+import AboutImage from './image/about.jpg'
 
 const About = () => {
   return (
-    <div>
-      <h2>About Us</h2>
-      <p>
-        Welcome to TravelTrove! We are a community-driven travel website
+    <div id="about_container">
+      <h1 className="about-heading">
+        About <span>Us</span>
+      </h1>
+      <img 
+      src={AboutImage} 
+      alt="Illustration" 
+      className="about-image" 
+      />
+      <p className="about-text">
+      Welcome to TravelTrove! We are a community-driven travel website
         where you can explore various travel destinations,
         share your travel experiences, and connect with fellow travel enthusiasts.
       </p>
@@ -15,11 +23,9 @@ const About = () => {
         Whether you are a seasoned traveler or planning your first trip, TravelTrove is here to provide you with
         valuable travel information and resources.
       </p>
-      <p>
-        Join our community today and start discovering the
-        world one bug at a time!
-      </p>
+      <div className="clearfix"></div>
     </div>
   );
 };
+
 export default About;

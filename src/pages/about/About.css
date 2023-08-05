@@ -1,41 +1,45 @@
-/* about.css */
+/* Styles for the container */
+#about_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-/* Global styles for the About page */
-body {
-    font-family: 'Arial', sans-serif; /* Use your preferred font-family */
-    background-color: #f5f5f5; /* Set the background color for the page */
-  }
+/* Center the heading */
+.about-heading {
+  text-align: center;
+  font-family: 'YourPreferredFont', sans-serif; /* Replace 'YourPreferredFont' with your desired font-family */
+}
+
+/* Style the 'Us' in 'About Us' */
+.about-heading span {
+  color: #fa7436; /* Orange color */
+}
+
+/* Style the travel image */
+.about-image {
+  float: left;
+  height: auto;
+  width: 35%;
+}
+
+/* Style the paragraph text */
+.about-text {
+  text-align: justify;
+  width: 550px;
   
-  /* Styles for the About container */
-  #about_container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent container */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-  }
-  
-  /* Styles for the heading */
-  h1 {
-    color: #333; /* Set the heading color */
-    text-align: center;
-  }
-  
-  /* Styles for the content */
-  p {
-    line-height: 1.6;
-    margin-bottom: 16px;
-  }
-  
-  /* Styles for the link */
-  a {
-    color: #fa7436; /* Set the link color */
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #f85c00; /* Darker color on hover */
-  }
-  
+}
+
+.about-text p {
+  color: var(--blood-red);
+  letter-spacing: 2px;
+  line-height: 15px;
+  font-size: 1.5rem;
+}
+
+/* Clear floating elements */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
