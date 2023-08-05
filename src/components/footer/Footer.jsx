@@ -14,33 +14,33 @@ const Footer=()=>{
             <div className="sb_footer section_padding">
                 <div className= "sb_footer-links">
                     <div className= "sb_footer-links_div">
-                        <h4>For Business</h4>
-                        <a href="/employer">
-                            <p>Employer</p>
-                        </a>
-                        <a href="/healthplan">
-                            <p>Heath Plan</p>
-                        </a>
-                        <a href="/individual">
-                            <p>Individual</p>
-                        </a>
-                    </div>
-                    <div className="sb_footer-links_div">
                       <h4>Resources</h4>
                         <a href="/resource">
                             <p>Resource center</p>
                         </a>
-                        <a href="/resource">
+                        <a href="/testimonials">
                             <p>Testimonials</p>
                         </a>
-                        <a href="/resource">
-                            <p>STV</p>
+                        <a href="/help">
+                            <p>FAQ'S</p>
+                        </a>
+                    </div>
+                    <div className="sb_footer-links_div">
+                      <h4>More</h4>
+                        <a href="/blog">
+                            <p>Our Blog</p>
+                        </a>
+                        <a href="/center">
+                            <p>Press Center</p>
+                        </a>
+                        <a href="/fare">
+                            <p>Low Fare Tips</p>
                         </a>
                     </div>
                     <div className="sb_footer-links_div">
                       <h4>Patners</h4>
                         <a href="/employer">
-                            <p>Swing Tech</p>
+                            <p>TT devs</p>
                         </a>
                     </div>  
                     <div className="sb_footer-links_div">
@@ -54,26 +54,26 @@ const Footer=()=>{
                         <a href="/career">
                             <p>Career</p>
                         </a>
-                        <a href="/contact">
+                        <a href="/contacts">
                             <p>Contact</p>
                         </a>
                     </div>  
                     <div className="sb_footer-links_div">
                         <h4>Coming soon on</h4>
                        <div class="social-container">
-                           <a href="https://www.youtube.com/c/jamesqquick"
+                           <a href="https://www.youtube.com"
                                 className="youtube social">
                                   <FontAwesomeIcon icon={faYoutube} size="2x" />
                            </a>
-                           <a href="https://www.facebook.com/learnbuildteach/"
+                           <a href="https://www.facebook.com"
                                 className="facebook social">
                                   <FontAwesomeIcon icon={faFacebook} size="2x" />
                            </a>
-                           <a href="https://www.twitter.com/jamesqquick" 
+                           <a href="https://www.twitter.com" 
                                 className="twitter social">
                                   <FontAwesomeIcon icon={faTwitter} size="2x" />
                            </a>
-                           <a href="https://www.instagram.com/learnbuildteach"
+                           <a href="https://www.instagram.com"
                                 className="instagram social">
                                  <FontAwesomeIcon icon={faInstagram} size="2x" />
                            </a>
