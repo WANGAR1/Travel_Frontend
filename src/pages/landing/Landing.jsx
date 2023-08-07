@@ -12,9 +12,9 @@ function Landing() {
     <div>
      
       <Home />
-      <About />
       <Destination />
       <TravelExperience />
+      <About />
       <Footer />
     </div>
     );

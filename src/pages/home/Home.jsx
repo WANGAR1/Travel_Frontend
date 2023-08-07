@@ -26,13 +26,13 @@ const Home = () => {
               Unleash your wanderlust and set off on a path of exploration.
             </p>
             <div className="d-flex mt-5">
-              <button 
+              <Link to="/destination" 
                 type="button" 
                 className="btn btn-primary btn-animated" 
                 style={{ backgroundColor: 'white', color: '#FA7436', borderColor: '#FA7436', borderRadius: '30px', outline: 'none' }}
               >
                 Discover Now
-              </button>
+              </Link>
             </div>
           </div>
           <div className="col-md-5">
