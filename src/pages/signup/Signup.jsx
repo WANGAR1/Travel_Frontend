@@ -7,6 +7,7 @@ const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [userType, setUserType] = useState('traveler'); // State to track user type selection
   const [error, setError] = useState('');
 
   const handleUsernameChange = (event) => {
@@ -19,6 +20,10 @@ const Signup = () => {
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
+  };
+
+  const handleUserTypeChange = (event) => {
+    setUserType(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -37,6 +42,7 @@ const Signup = () => {
       console.log('Username:', username);
       console.log('Email:', email);
       console.log('Password:', password);
+      console.log('User Type:', userType);
       // Clear the form fields after successful submission.
       setUsername('');
       setEmail('');
@@ -83,6 +89,12 @@ const Signup = () => {
             placeholder="Password"
             required
           />
+          <br />
+          {/* Add the user type selection drop-down */}
+          <select name="userType" value={userType} onChange={handleUserTypeChange}>
+            <option value="traveler">Traveller</option>
+            <option value="tour-operator">Tour Operator</option>
+          </select>
           <br />
           {error && <div style={{ color: 'red' }}>{error}</div>}
           <br />

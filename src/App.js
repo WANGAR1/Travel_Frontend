@@ -9,7 +9,6 @@ import Contact from './pages/contact/Contact';
 import Header from './components/header/Header';
 import TravelExperience from './pages/travelexperience/TravelExperience';
 import BookingForm from './components/bookingform/BookingForm';
-<<<<<<< HEAD
 import Landing from './pages/landing/Landing';
 import PrivacyPolicy from './components/footer/PrivacyPolicy';
 import CookieDeclaration from './components/footer/CookieDeclaration';
@@ -24,9 +23,6 @@ import ResourceCenter from './components/footer/ResourceCenter';
 import Blog from './components/footer/Blog';
 import Testimonial from './components/footer/Testimonial';
 
-=======
-import Footer from './components/footer/Footer'
->>>>>>> 0da457a (worked on about.css)
 const App = () => {
   return (
     <div>

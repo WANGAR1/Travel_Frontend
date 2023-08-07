@@ -11,6 +11,8 @@
     padding: 0.25em 0.75em;
     align-items: center;
     display: inline-flex;
+    justify-self: start; 
+
 }
 
 .brand-logo > svg {
@@ -22,3 +24,12 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+/* Custom CSS */
+.text-orange-600 {
+    color: #fa7436; /* Orange color */
+  }
+  .border-orange-600 {
+    border-color: #fa7436; /* Orange color */
+  }
+  

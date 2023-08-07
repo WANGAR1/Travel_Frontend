@@ -1,5 +1,46 @@
+/* Styles for the container */
+#home_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Center the heading */
+.home-heading {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FA7436;
+}
+
+/* Style the paragraph text */
+.home-text {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Style the image */
+.home-image {
+  float: right;
+  height: auto;
+  width: 200%;
+  border-radius: 70%; /* Make the image round */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  margin-right: 2px;
+}
+
+
+
+/* Clear floating elements */
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .btn-animated:hover {
-    transform: scale(1.25);
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+  transform: scale(1.13);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
