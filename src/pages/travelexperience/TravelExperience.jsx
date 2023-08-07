@@ -19,24 +19,19 @@ const TravelExperience = () => {
     <div className="max-w-6xl mx-auto">
       <h1 className="travel-experience-title">Travel Experiences</h1>
       <div className="flex-wrap">
-        {travelData.map((travelItem) => (
-          <div className="card m-4 w-1/3 md:w-1/4" key={travelItem.id}> {/* Adjust width for medium screens */}
+        {travelExperiences.map((travelItem) => (
+          <div className="card m-4 w-1/3 md:w-1/4" key={travelItem.id}>
             <div className="image-container">
-              {travelItem.image_url.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Image ${index + 1}`}
-                  className="rounded-t-lg"
-                />
-              ))}
+              <img src={travelItem.image_url} alt={`Image for ${travelItem.title}`} className="rounded-t-lg" />
             </div>
             <div className="mt-6 mb-2">
-               <h2 className="text-xl font-semibold tracking-wide font-bold">
-                      {travelItem.title}
-               </h2>
+              <h2 className="text-xl font-semibold tracking-wide">
+                {travelItem.title}
+              </h2>
             </div>
-            <p className="dark:text-black-100">{travelItem.description}</p>
+            <p className="dark:text-black-100">
+              {travelItem.description}
+            </p>
           </div>
         ))}
       </div>
