@@ -1,17 +1,27 @@
-import React from 'react';
-import './TravelExperience.css'; // Import the CSS file
-import travelData from './travelData';
+import React, { useState, useEffect } from 'react';
+import './TravelExperience.css';
 
 const TravelExperience = () => {
+  const [travelExperiences, setTravelExperiences] = useState([]);
+
+  useEffect(() => {
+    fetch('/travel_experiences')
+      .then(response => response.json())
+      .then(data => {
+        setTravelExperiences(data);
+      })
+      .catch(error => {
+        console.error('Error fetching travel experiences:', error);
+      });
+  }, []);
+
   return (
     <div>
-        <h1 className="travel-experience-title">My Travel Experiences</h1>
-      {travelData.map((travelItem) => (
+      <h1 className="travel-experience-title">Travel Experiences</h1>
+      {travelExperiences.map((travelItem) => (
         <div className="card" key={travelItem.id}>
           <div className="image-container">
-            {travelItem.image_url.map((img, index) => (
-              <img key={index} src={img} alt={`Image ${index + 1}`} />
-            ))}
+            <img src={travelItem.image_url} alt={`Image for ${travelItem.title}`} />
           </div>
           <div className="mt-6 mb-2">
             <h2 className="text-xl font-semibold tracking-wide">
@@ -28,4 +38,3 @@ const TravelExperience = () => {
 };
 
 export default TravelExperience;
-
