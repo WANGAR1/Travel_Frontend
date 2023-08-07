@@ -3,7 +3,6 @@ import React from "react";
 import Home from "../home/Home";
 import About from "../about/About";
 import Destination from "../destination/Destination";
-import Packages from "../packages/Packages";
 import TravelExperience from "../travelexperience/TravelExperience";
 import Footer from "../../components/footer/Footer";
 
@@ -15,7 +14,6 @@ function Landing() {
       <Home />
       <About />
       <Destination />
-      <Packages />
       <TravelExperience />
       <Footer />
     </div>
