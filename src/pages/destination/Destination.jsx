@@ -26,12 +26,15 @@ const Destination = () => {
       </p>
       <Masonry breakpointCols={3} className="masonry-grid" columnClassName="masonry-grid-column">
         {destinations.map(destination => (
-          <Link to={`/destination/${destination.id}`} key={destination.id} className="destination-link">
+          
+                   <Link to={`/destination/${destination.id}`} key={destination.id} className="destination-link">
             <div className="destination-item">
               <img src={destination.image_url} alt={destination.location} className="destination-image" />
-              <div className="destination-name">{destination.location}, {destination.country}</div>
+              <Link to="/packages"className="destination-name">{destination.location}, {destination.country}</Link>
             </div>
           </Link>
+         
+          
         ))}
       </Masonry>
     </div>

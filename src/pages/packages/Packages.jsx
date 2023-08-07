@@ -13,7 +13,7 @@ const Packages = () => {
   }, []);
 
   return (
-    <div>
+    <div className="packages-container"> {/* Add packages-container */}
       {travelPackages.map(travelPackage => (
         <div className="card" key={travelPackage.id}>
           <h2>{travelPackage.name}</h2>

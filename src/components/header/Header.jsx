@@ -49,11 +49,8 @@ const Header = () => {
               <Link to="/destination" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">
                 Destinations
               </Link>
-              <Link to="/packages" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">
-                Packages
-              </Link>
               <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">
-                My experiences
+                Travel experiences
               </Link>
               <Link to="/contacts" className="text-gray-800 text-sm font-semibold hover:text-purple-600">
                 Contacts
@@ -92,9 +89,6 @@ const Header = () => {
               </Link>
               <Link to="/destination" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">
                 Destinations
-              </Link>
-              <Link to="/packages" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">
-                Packages
               </Link>
               <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mb-1">
                 My experiences

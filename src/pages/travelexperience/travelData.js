@@ -55,6 +55,13 @@ const travelData = [
         image_url: ["https://tour.epesicloud.com/app/storage/uploads/37/1667979745_16_KEN_490403_Swimming-Pool-with-View-of-Mt-Kenya.jpg"],
         user_id: 8,
       },
+      {
+        id: 9,
+        title: "Exploring the Wilderness",
+        description: "Embark on a thrilling adventure through untamed wilderness. Experience the thrill of discovering hidden treasures in the vast expanse of unexplored landscapes. Get up close and personal with nature as you encounter majestic wildlife, breathtaking landscapes, and stunning natural wonders. From dense jungles to sprawling savannahs, the wilderness offers a plethora of exciting activities, including wildlife safaris, trekking, and camping under the starry night sky. Whether you're an adrenaline junkie seeking heart-pounding escapades or a nature enthusiast yearning for a deep connection with the wild, this expedition promises an unforgettable journey filled with wonder and awe.",
+        image_url: ["https://tour.epesicloud.com/app/storage/uploads/37/1667984120_34_Flamingo-Hill-Camp-27.jpg"],
+        user_id: 9,
+      },
   ];
   
   export default travelData;
