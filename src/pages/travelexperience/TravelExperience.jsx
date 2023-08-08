@@ -17,7 +17,9 @@ const TravelExperience = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className="travel-experience-title">Travel Experiences</h1>
+      <h1 className="travel-experience-title">
+        <span className="travel-title-highlight">Travel</span> Experiences {/* Highlight "Travel" */}
+      </h1>
       <div className="flex-wrap">
         {travelExperiences.map((travelItem) => (
           <div className="card m-4 w-1/3 md:w-1/4" key={travelItem.id}>

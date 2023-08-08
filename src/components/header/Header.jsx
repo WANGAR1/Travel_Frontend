@@ -1,8 +1,9 @@
+// src/components/Header.jsx
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Step 1: Import Link
+import { Link } from 'react-router-dom';
 import "./Header.css"
 
-const Header = () => {
+const Header = ({ isLoggedIn }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -58,13 +59,25 @@ const Header = () => {
             </div>
 
             <div className="hidden sm:flex sm:items-center">
-              <Link to="/signup" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-6">
-                Signup
-              </Link>
-              <Link to="/login" className="text-orange-600 text-sm font-semibold border px-3 py-2 rounded-lg hover:text-orange-600 hover:border-orange-600 hover:text-gray-800">
-                 Login
-              </Link>
-
+              {isLoggedIn ? (
+                <>
+                  <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-7">
+                    My Profile
+                  </Link>
+                  <Link to="/logout" className="text-orange-600 text-sm font-semibold border px-3 py-2 rounded-lg hover:text-orange-600 hover:border-orange-600 hover:text-gray-800">
+                     Logout
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/signup" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-6">
+                    Signup
+                  </Link>
+                  <Link to="/login" className="text-orange-600 text-sm font-semibold border px-3 py-2 rounded-lg hover:text-orange-600 hover:border-orange-600 hover:text-gray-800">
+                     Login
+                  </Link>
+                </>
+              )}
             </div>
 
             <div className="sm:hidden cursor-pointer" onClick={toggleMenu}>

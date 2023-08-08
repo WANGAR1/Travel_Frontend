@@ -6,6 +6,11 @@
   margin-bottom: 10px;
 }
 
+/* Add styles for the highlighted "Travel" word */
+.travel-title-highlight {
+  color: rgb(22, 11, 0); /* Set the color to black */
+}
+
 .card {
   width: 400px;
   border: 1px solid #ccc;
