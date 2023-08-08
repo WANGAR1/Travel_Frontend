@@ -1,3 +1,4 @@
+// Destination.js
 import React, { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,7 @@ const Destination = () => {
 
   useEffect(() => {
     // Fetch destinations data from your backend API
-    fetch('/destinations') // Replace with your API endpoint
+    fetch('/destinations')
       .then(response => response.json())
       .then(data => {
         setDestinations(data); // Assuming the data contains the destinations array
@@ -26,15 +27,15 @@ const Destination = () => {
       </p>
       <Masonry breakpointCols={3} className="masonry-grid" columnClassName="masonry-grid-column">
         {destinations.map(destination => (
-          
-                   <Link to={`/destination/${destination.id}`} key={destination.id} className="destination-link">
-            <div className="destination-item">
-             <Link to="packages"> <img src={destination.image_url} alt={destination.location} className="destination-image" /></Link>
-              <Link to="/packages"className="destination-name">{destination.location}, {destination.country}</Link>
-            </div>
-          </Link>
-         
-          
+          <Link to={`/destination/${destination.id}`} key={destination.id} className="destination-link">
+          <div className="destination-item">
+            <img src={destination.image_url} alt={destination.location} className="destination-image" />
+            <Link to={`/destination/${destination.id}`} className="destination-name">
+              {destination.location}, {destination.country}
+            </Link>
+          </div>
+        </Link>
+        
         ))}
       </Masonry>
     </div>

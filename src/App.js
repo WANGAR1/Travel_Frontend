@@ -4,6 +4,7 @@ import Login from './pages/login/Login';
 import Signup from './pages/signup/Signup';
 import About from './pages/about/About';
 import Destination from './pages/destination/Destination';
+import DestinationDetails from './pages/destination/DestinationDetails';
 import Packages from './pages/packages/Packages';
 import Contact from './pages/contact/Contact';
 import Header from './components/header/Header';
@@ -31,6 +32,7 @@ const App = () => {
         <Route exact path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/destination" element={<Destination />} />
+        <Route path='/destination/:id' element={<DestinationDetails />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/experiences" element={<TravelExperience />} />
         <Route path="/contacts" element={<Contact />} />
