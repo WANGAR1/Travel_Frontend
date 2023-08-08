@@ -12,20 +12,54 @@ const BookingForm = () => {
     check_out_date: '',
   });
 
+  const [bookingStatus, setBookingStatus] = useState(null);
+  const [bookingMessage, setBookingMessage] = useState('');
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can perform any validation or submit the form to a backend here
-    console.log(formData);
+    try {
+      const response = await fetch('/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setBookingStatus('success');
+        setBookingMessage('Booking successful!'); // Set success message
+      } else if (response.status === 401) {
+        setBookingStatus('error');
+        setBookingMessage('You are not authorized to perform this action.'); // Unauthorized error
+      } else if (response.status === 422) {
+        setBookingStatus('error');
+        setBookingMessage('Validation failed. Please check your input.'); // Validation error
+      } else {
+        setBookingStatus('error');
+        setBookingMessage('Booking failed. Please try again.'); // Set error message
+      }
+    } catch (error) {
+      setBookingStatus('error');
+      setBookingMessage('An error occurred. Please try again.'); // Set error message
+    }
   };
 
   return (
     <div className="booking-form">
       <h2>Booking Form</h2>
+      {bookingStatus === 'success' && (
+        <p className="booking-success">{bookingMessage}</p>
+      )}
+      {bookingStatus === 'error' && (
+        <p className="booking-error">{bookingMessage}</p>
+      )}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>First Name</label>
