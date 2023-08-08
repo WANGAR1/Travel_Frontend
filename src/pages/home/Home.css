@@ -26,8 +26,9 @@
   height: auto;
   width: 200%;
   border-radius: 70%; /* Make the image round */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  box-shadow: 0 20px 12px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
   margin-right: 2px;
+  margin-top: -55px;
 }
 
 

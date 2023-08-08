@@ -12,7 +12,7 @@ const Home = () => {
           <div className="col-md-7">
             <h1 className="display-1">
               <span className="text-black">Unleash</span> 
-              <span className="text-black">Your</span> 
+              <span style={{ color: '#FA7436' }}>Your</span> 
               <span className="text-black">Wanderlust:</span>  Start Your Thrilling 
               <span style={{ color: '#FA7436' }}> Journey</span> with Us  Now!
             </h1>
