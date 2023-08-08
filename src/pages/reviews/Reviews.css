@@ -1,0 +1,17 @@
+/* Reviews.css */
+.edit-button {
+    position: right;
+    top: 1rem;
+    right: 1rem;
+    padding:  10px 20px;
+    background-color: #FF7036;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .edit-button:hover {
+    background-color: #00FF00;
+  }
+  

@@ -23,12 +23,13 @@ import PressCenter from './components/footer/PressCenter';
 import ResourceCenter from './components/footer/ResourceCenter';
 import Blog from './components/footer/Blog';
 import Testimonial from './components/footer/Testimonial';
+import ReviewsForm from './components/reviewsform/ReviewsForm';
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Routes>
+        <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
         <Route path="/destination" element={<Destination />} />
@@ -51,6 +52,7 @@ const App = () => {
         <Route path="/resource" element={<ResourceCenter />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/testimonials" element={<Testimonial />} />
+        <Route path="/reviewsform" element={<ReviewsForm/>} />
         {/* Add a 404 route if no match is found */}
         <Route path="*" element={<h1>404 - Not Found</h1>} />
       </Routes>
@@ -60,4 +62,3 @@ const App = () => {
 };
 
 export default App;
-
