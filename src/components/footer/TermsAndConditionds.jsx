@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const TermsAndConditions = () => {
   return (
-    <div className="terms-and-conditions">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="terms-and-conditions">
       <h2>Terms and Conditions for TravelTrove:</h2>
       <p>
         <strong>Introduction:</strong>
@@ -39,6 +44,8 @@ const TermsAndConditions = () => {
         By using TravelTrove, you acknowledge that you have read, understood, and agreed to these Terms and Conditions. Enjoy your travel experiences on TravelTrove!
       </p>
     </div>
+  </div>
+    
   );
 };
 

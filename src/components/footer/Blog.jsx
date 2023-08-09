@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const Blog = () => {
   return (
-    <section className="bg-white text-gray-800">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <section className="bg-white text-gray-800">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
         <a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-white border border-gray-200">
           <img src="https://source.unsplash.com/random/480x360" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-100" />
@@ -127,7 +132,9 @@ const Blog = () => {
         </div>
       </div>
     </section>
-  );
+
+    </div>
+      );
 };
 
 export default Blog;

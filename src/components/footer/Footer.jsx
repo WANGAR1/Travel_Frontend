@@ -39,7 +39,7 @@ const Footer=()=>{
                     </div>
                     <div className="sb_footer-links_div">
                       <h4>Patners</h4>
-                        <a href="/employer">
+                        <a href="/team">
                             <p>TT devs</p>
                         </a>
                     </div>  

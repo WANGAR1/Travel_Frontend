@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const FAQ = () => {
   return (
-    <section className="bg-white text-gray-900">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <section className="bg-white text-gray-900">
   <div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
     <h2 className="mb-12 text-4xl font-bold text-center sm:text-5xl">Frequently Asked Questions</h2>
     <div className="divide-y divide-gray-300">
@@ -50,7 +55,7 @@ const FAQ = () => {
     </div>
   </div>
 </section>
-
+    </div>
   );
 };
 

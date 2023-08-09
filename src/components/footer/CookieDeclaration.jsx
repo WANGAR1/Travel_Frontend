@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../header/Header';
 
 const CookieDeclaration = () => {
   const [showCookieBanner, setShowCookieBanner] = useState(true);
@@ -14,7 +15,11 @@ const CookieDeclaration = () => {
   }
 
   return (
-    <div className="cookie-banner">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="cookie-banner">
       <p>
         We use cookies to enhance your experience on TravelTrove. By continuing to use our website, you
         consent to the use of cookies as described in our Cookie Declaration.
@@ -23,6 +28,7 @@ const CookieDeclaration = () => {
         <button onClick={handleAcceptCookies}>Accept Cookies</button>
         <a href="/privacy">Learn More</a> {/* Link to your privacy policy page */}
       </div>
+    </div>
     </div>
   );
 };

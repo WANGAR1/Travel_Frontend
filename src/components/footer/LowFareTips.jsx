@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const LowFareTips = () => {
   return (
-    <div className="low-fare-tips">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="low-fare-tips">
       <h2>Low Fare Tips for TravelTrove Users</h2>
       <p>At TravelTrove, we understand the importance of finding low fare options to make your travel dreams come true without breaking the bank. Here are some valuable tips to help you find the best deals and save money on your travel experiences:</p>
       <ol>
@@ -48,6 +53,7 @@ const LowFareTips = () => {
         </li>
       </ol>
       <p>By applying these low fare tips, you can make the most of TravelTrove's user-centric platform and discover incredible travel experiences at the best prices. Happy travels!</p>
+    </div>
     </div>
   );
 }

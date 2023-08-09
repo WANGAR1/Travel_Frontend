@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const PressCenter = () => {
   return (
-    <div className="press-center">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="press-center">
       <h2>Welcome to the TravelTrove Press Center!</h2>
       <p>Here you will find all the latest information and resources about TravelTrove, the user-centric travel platform that aims to revolutionize the travel industry. Feel free to explore our press releases, media kit, and contact information below.</p>
 
@@ -37,6 +42,7 @@ const PressCenter = () => {
       <p>Stay tuned for the latest updates and developments from TravelTrove. Thank you for your interest in our platform!</p>
 
       <p>Note to Editors: High-resolution images and additional information are available upon request.</p>
+    </div>
     </div>
   );
 }

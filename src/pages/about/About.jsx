@@ -1,10 +1,15 @@
 import React from 'react';
 import './About.css'; // Import the CSS file
 import AboutImage from './image/about.jpg';
+import Header from '../../components/header/Header';
 
 const About = () => {
   return (
-    <div id="about_container">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div id="about_container">
       <h1 className="about-heading">
         About <span>Us</span>
       </h1>
@@ -29,6 +34,8 @@ const About = () => {
       </div>
       <div className="clearfix"></div>
     </div>
+    </div>
+    
   );
 };
 

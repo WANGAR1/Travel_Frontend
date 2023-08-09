@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const SecurityMeasures = () => {
   return (
-    <div className="security-measures">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="security-measures">
       <h2>Security Measures for TravelTrove:</h2>
       <ul>
         <li>
@@ -58,6 +63,8 @@ const SecurityMeasures = () => {
         </li>
       </ul>
     </div>
+  </div>
+    
   );
 };
 

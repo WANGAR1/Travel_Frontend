@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const PressRelease = () => {
   return (
-    <div className="press-release">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="press-release">
       <h1>Press Release: Introducing TravelTrove - The User-Centric Travel Platform</h1>
       <p>FOR IMMEDIATE RELEASE</p>
 
@@ -41,6 +46,8 @@ const PressRelease = () => {
 
       <p>End of Press Release</p>
     </div>
+  </div>
+    
   );
 };
 

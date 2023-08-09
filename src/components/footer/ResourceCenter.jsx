@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const ResourceCenter = () => {
   return (
-    <div className="resource-center">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="resource-center">
       <h2>Welcome to the TravelTrove Resource Center</h2>
       <p>At TravelTrove, we are committed to providing travelers and tour operators with a user-friendly platform that simplifies the travel experience. Our Resource Center is designed to offer valuable information, tips, and guides to help you make the most of your travel journeys. Whether you are a seasoned globetrotter or a first-time adventurer, we've got you covered!</p>
       <ul>
@@ -45,7 +50,8 @@ const ResourceCenter = () => {
       </ul>
       <p>As you embark on your travel adventures with TravelTrove, our Resource Center will be your go-to hub for information and support. We are here to empower you to discover and share memorable travel experiences hassle-free. Happy exploring!</p>
     </div>
-  );
+  </div>
+      );
 }
 
 export default ResourceCenter;

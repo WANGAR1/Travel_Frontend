@@ -44,7 +44,7 @@ const Signup = () => {
       setUsername('');
       setEmail('');
       setPassword('');
-      navigate('/userdashboard'); // Navigate to UserDashboard after successful signup
+      navigate('/userlayout'); // Navigate to UserDashboard after successful signup
     } catch (error) {
       setError(error.response.data.error);
     }

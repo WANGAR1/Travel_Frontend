@@ -26,6 +26,9 @@ import ReviewsForm from './components/reviewsform/ReviewsForm';
 import UserDashboard from './components/header/UserDashboard'; 
 import UserProfile from './pages/userprofile/UserProfile';
 import UserProfileForm from './components/userprofileform/UserProfileForm';
+import UserLayout from './components/header/UserLayout';
+import TTDevs from './components/footer/TTDevs';
+
 
 
 
@@ -55,10 +58,12 @@ const App = () => {
         <Route path="/center" element={<PressCenter />} />
         <Route path="/resource" element={<ResourceCenter />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/team" element={<TTDevs />} />
         <Route path="/testimonials" element={<Testimonial />} />
         <Route path="/reviewsform" element={<ReviewsForm/>} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/profileform" element={<UserProfileForm />} />
+        <Route path="/userlayout" element={<UserLayout />} />
         {/* Add a 404 route if no match is found */}
         <Route path="*" element={<h1>404 - Not Found</h1>} />
       </Routes>

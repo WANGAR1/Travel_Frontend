@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const Careers = () => {
   return (
-    <div className="careers-container">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="careers-container">
       <h2>Careers at TravelTrove</h2>
       <p>
         At TravelTrove, we are on a mission to revolutionize the travel industry by creating a user-friendly and personalized platform that empowers travelers and tour operators alike. If you are passionate about travel and technology, and if you want to be a part of a team that is dedicated to providing seamless travel experiences, then TravelTrove might be the right place for you.
@@ -91,6 +96,7 @@ const Careers = () => {
       <p>
         At TravelTrove, we believe in the power of travel to transform lives, and we are committed to building a platform that empowers travelers and enhances their experiences. Join us on this exciting journey and be a part of the future of travel!
       </p>
+    </div>
     </div>
   );
 };

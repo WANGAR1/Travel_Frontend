@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Header.css"
-import Destination from '../../pages/destination/Destination';
 
 const UserDashboard = () => {
   const [userType, setUserType] = useState("experiences"); // Initialize userType state
@@ -69,9 +68,6 @@ const UserDashboard = () => {
          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <Destination />
     </div>
    </div> 
     

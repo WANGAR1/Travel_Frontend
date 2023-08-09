@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserProfile.css'; // Import the CSS file
@@ -35,22 +34,23 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="user-profile-container">
-      <div className="edit-button" onClick={handleEditProfile}>
-        Edit
-      </div>
-      {userData ? (
-        <>
+         <div>
+          <div>
+            <UserDashboard />
+          </div>
 
-          <div className="user-profile-fields">
-            <div className="field">
-              <label>First Name:</label>
-              <p>{userData.firstName}</p>
+      <div className="user-profile-container">
+        {!userData ? (
+        <p>Loading user data...</p>
+      ) : (
+        <>
+          {!isEditMode ? (
+          <>
+            <div className="edit-button" onClick={handleEditProfile}>
+              Edit
             </div>
-            <div className="field">
-              <label>Last Name:</label>
-              <p>{userData.lastName}</p>
-            </div>
+
+            <div className="user-profile-fields">
             <div className="field">
               <label>Username:</label>
               <p>{userData.username}</p>
@@ -60,11 +60,16 @@ const UserProfile = () => {
               <p>{userData.email}</p>
             </div>
           </div>
-        </>
-      ) : (
-        <p>Loading user data...</p>
+          </>
+        ) : (
+          <EditUserProfile userData={userData} />
+        )}
+          </>
       )}
-    </div>
+          
+        
+      </div>
+         </div>     
   );
 };
 

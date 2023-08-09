@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from '../header/Header';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-policy">
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="privacy-policy">
       <h2>Data Collection and Usage:</h2>
       <p>
         <strong>1.1 Personal Information:</strong> TravelTrove collects and stores essential personal
@@ -86,6 +91,8 @@ const PrivacyPolicy = () => {
         of user data and maintains transparency in data collection and usage practices.
       </p>
     </div>
+  </div>
+    
   );
 };
 
