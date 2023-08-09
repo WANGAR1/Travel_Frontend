@@ -5,10 +5,6 @@ import Header from '../../components/header/Header';
 
 const About = () => {
   return (
-    <div>
-      <div>
-        <Header />
-      </div>
       <div id="about_container">
       <h1 className="about-heading">
         About <span>Us</span>
@@ -34,8 +30,6 @@ const About = () => {
       </div>
       <div className="clearfix"></div>
     </div>
-    </div>
-    
   );
 };
 

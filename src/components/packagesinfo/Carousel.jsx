@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import PackagesInfo from './PackagesCard';
+import { useParams } from 'react-router-dom';
 
 const Carousel = () => {
-  const [travelPackages, setTravelPackages] = useState([]);
+  const { id } = useParams();
+  const [travelPackages, setTravelPackages] = useState([]); // Define travelPackages state
 
   useEffect(() => {
-    fetch('/travel_packages')
+    fetch(`/travel_packages/${id}`)
       .then(response => response.json())
-      .then(data => setTravelPackages(data))
-      .catch(error => console.error('Error fetching travel packages:', error));
-  }, []);
+      .then(data => setTravelPackages([data])) // Set the fetched data in an array
+      .catch(error => console.error('Error fetching travel package:', error));
+  }, [id]);
+
+  if (travelPackages.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     
@@ -71,9 +76,6 @@ const Carousel = () => {
         </svg>
       </button>
     </div>
-    <div>
-    <PackagesInfo />
-  </div>
     </div>
     
   );

@@ -33,6 +33,8 @@ import ExperienceLanding from './pages/landing/ExperienceLanding';
 import UserExperience from './components/header/UserExperience';
 import UserPackages from './components/header/UserPackages';
 import UserDestinations from './components/header/UserDestinations';
+import AboutLanding from './pages/landing/AboutLanding';
+import PackagesDestails from './components/packagesinfo/PackagesDetails';
 
 
 
@@ -43,12 +45,14 @@ const App = () => {
         <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
+        <Route path="/aboutlanding" element={<AboutLanding />} />
         <Route path="/destination" element={<Destination />} />
         <Route path='/destination/:id' element={<DestinationDetails />} />
         <Route path="/destinationlanding" element={<DestinationLanding />} />
         <Route path="/userdestination" element={<UserDestinations />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/userpackages" element={<UserPackages />} />
+        <Route path="/packagesdetails" element={<PackagesDestails />} />
         <Route path="/experiences" element={<TravelExperience />} />
         <Route path="/experiencelanding" element={<ExperienceLanding />} />
         <Route path="/userexperience" element={<UserExperience />} />

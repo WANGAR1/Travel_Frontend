@@ -44,7 +44,7 @@ const Header = ({ isLoggedIn }) => {
 
             <div className="hidden sm:flex sm:items-center">
               {/* Step 2: Replace anchor tags with Link components */}
-              <Link to="/about" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+              <Link to="/aboutlanding" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 About
               </Link>
               <Link to="/destinationlanding" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
