@@ -7,7 +7,6 @@ import Destination from './pages/destination/Destination';
 import DestinationDetails from './pages/destination/DestinationDetails';
 import Packages from './pages/packages/Packages';
 import Contact from './pages/contact/Contact';
-import Header from './components/header/Header';
 import TravelExperience from './pages/travelexperience/TravelExperience';
 import BookingForm from './components/bookingform/BookingForm';
 import Landing from './pages/landing/Landing';
@@ -26,10 +25,12 @@ import Testimonial from './components/footer/Testimonial';
 import ReviewsForm from './components/reviewsform/ReviewsForm';
 import UserDashboard from './components/header/UserDashboard';
 
+
+
+
 const App = () => {
   return (
     <div>
-      <Header />
         <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />
