@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "./Header.css"
 
 const UserDashboard = () => {
-  const [userType, setUserType] = useState("experiences"); // Initialize userType state
+  const [userType, setUserType] = useState("userexperience"); // Initialize userType state
 
   const handleUserTypeChange = (event) => {
     setUserType(event.target.value);
@@ -45,13 +45,13 @@ const UserDashboard = () => {
 
             <div className="hidden sm:flex sm:items-center">
               {/* Step 2: Replace anchor tags with Link components */}
-              <Link to="/destination" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+              <Link to="/userdestination" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 My Destinations
               </Link>
-              <Link to="/packages" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+              <Link to="/userpackages" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 My Packages
               </Link>
-              <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+              <Link to="/userexperience" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 My experiences
               </Link>
 

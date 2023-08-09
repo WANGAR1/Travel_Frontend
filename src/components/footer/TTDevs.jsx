@@ -19,7 +19,7 @@ const TTDevs = () => {
 					<p>UI Expert and Developer.</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
-					<a rel="noopener noreferrer" href="#" title="Email" className="text-gray-900 hover:text-violet-400">
+					<a rel="noopener noreferrer" href="mailto:thandenajma@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -49,7 +49,7 @@ const TTDevs = () => {
 					<p>Figma Designer and Developer.</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
-					<a rel="noopener noreferrer" href="ann99wangui@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
+					<a rel="noopener noreferrer" href="mailto:ann99wangui@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -79,7 +79,7 @@ const TTDevs = () => {
 					<p>Expert Backend Developer.</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
-					<a rel="noopener noreferrer" href="wnjunge19@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
+					<a rel="noopener noreferrer" href="mailto:wnjunge19@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -109,7 +109,7 @@ const TTDevs = () => {
 					<p>Expert Developer and Document Controller.</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
-					<a rel="noopener noreferrer" href="d.cheru112@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
+					<a rel="noopener noreferrer" href="mailto:d.cheru112@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -139,7 +139,7 @@ const TTDevs = () => {
 					<p>Team Lead</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
-					<a rel="noopener noreferrer" href="samantha.wangari2@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
+					<a rel="noopener noreferrer" href="mailto:samantha.wangari2@gmail.com" title="Email" className="text-gray-900 hover:text-violet-400">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
 							<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
 							<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>

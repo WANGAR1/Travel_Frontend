@@ -28,6 +28,11 @@ import UserProfile from './pages/userprofile/UserProfile';
 import UserProfileForm from './components/userprofileform/UserProfileForm';
 import UserLayout from './components/header/UserLayout';
 import TTDevs from './components/footer/TTDevs';
+import DestinationLanding from './pages/landing/DestinationLanding';
+import ExperienceLanding from './pages/landing/ExperienceLanding';
+import UserExperience from './components/header/UserExperience';
+import UserPackages from './components/header/UserPackages';
+import UserDestinations from './components/header/UserDestinations';
 
 
 
@@ -40,8 +45,13 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/destination" element={<Destination />} />
         <Route path='/destination/:id' element={<DestinationDetails />} />
+        <Route path="/destinationlanding" element={<DestinationLanding />} />
+        <Route path="/userdestination" element={<UserDestinations />} />
         <Route path="/packages" element={<Packages />} />
+        <Route path="/userpackages" element={<UserPackages />} />
         <Route path="/experiences" element={<TravelExperience />} />
+        <Route path="/experiencelanding" element={<ExperienceLanding />} />
+        <Route path="/userexperience" element={<UserExperience />} />
         <Route path="/contacts" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />

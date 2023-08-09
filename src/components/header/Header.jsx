@@ -47,10 +47,10 @@ const Header = ({ isLoggedIn }) => {
               <Link to="/about" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 About
               </Link>
-              <Link to="/destination" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+              <Link to="/destinationlanding" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 Destinations
               </Link>
-              <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+              <Link to="/experiencelanding" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
                 Travel experiences
               </Link>
               <Link to="/contacts" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
