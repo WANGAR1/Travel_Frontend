@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserProfile.css'; // Import the CSS file
 import EditUserProfile from './EditUserProfile';
+import UserDashboard from '../../components/header/UserDashboard';
 
 const UserProfile = () => {
   const [userData, setUserData] = useState(null);
@@ -33,20 +35,22 @@ const UserProfile = () => {
   };
 
   return (
-
-    
-      <div className="user-profile-container">
-        {!userData ? (
-        <p>Loading user data...</p>
-      ) : (
+    <div className="user-profile-container">
+      <div className="edit-button" onClick={handleEditProfile}>
+        Edit
+      </div>
+      {userData ? (
         <>
-          {!isEditMode ? (
-          <>
-            <div className="edit-button" onClick={handleEditProfile}>
-              Edit
-            </div>
 
-            <div className="user-profile-fields">
+          <div className="user-profile-fields">
+            <div className="field">
+              <label>First Name:</label>
+              <p>{userData.firstName}</p>
+            </div>
+            <div className="field">
+              <label>Last Name:</label>
+              <p>{userData.lastName}</p>
+            </div>
             <div className="field">
               <label>Username:</label>
               <p>{userData.username}</p>
@@ -56,18 +60,11 @@ const UserProfile = () => {
               <p>{userData.email}</p>
             </div>
           </div>
-          </>
-        ) : (
-          <EditUserProfile userData={userData} />
-        )}
-          </>
+        </>
+      ) : (
+        <p>Loading user data...</p>
       )}
-          
-        
-      </div>
-    
-
-
+    </div>
   );
 };
 

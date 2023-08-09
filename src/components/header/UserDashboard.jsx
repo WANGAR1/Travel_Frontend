@@ -46,25 +46,17 @@ const UserDashboard = () => {
 
             <div className="hidden sm:flex sm:items-center">
               {/* Step 2: Replace anchor tags with Link components */}
-              <select name="userType" value={userType} onChange={handleUserTypeChange}>
-                 <option value="experiences">
-                   <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-orange-600">
-                     My Experiences
-                   </Link>
-                 </option>
-                 <option value="packages">
-                   <Link to="/packages" className="text-gray-800 text-sm font-semibold hover:text-orange-600">
-                     My Packages
-                   </Link>
-                 </option>
-                 <option value="destinations">
-                   <Link to="/destination" className="text-gray-800 text-sm font-semibold hover:text-orange-600">
-                     My Destinations
-                   </Link>
-                 </option>
-              </select>
-            </div>
+              <Link to="/destination" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+                My Destinations
+              </Link>
+              <Link to="/packages" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+                My Packages
+              </Link>
+              <Link to="/experiences" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-7">
+                My experiences
+              </Link>
 
+            </div>
             <div className="hidden sm:flex sm:items-center">
               <Link to="/profile" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-6">
                 My Profile

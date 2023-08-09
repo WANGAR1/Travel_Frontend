@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Contact.css';
+import Header from '../../components/header/Header';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +41,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="p-6 text-gray-900">
+  <div>
+    <div>
+      <Header />
+    </div>
+      <section className="p-6 text-gray-900">
       <form onSubmit={handleSubmit} noValidate className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow bg-white">
         <h2 className="w-full text-3xl font-bold leading">Contact us</h2>
         {successMessage && <p className="text-green-500">{successMessage}</p>}
@@ -94,13 +100,15 @@ const Contact = () => {
         <div>
           <button
             type="submit"
-            className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:border-indigo-500 bg-violet-400 text-gray-900"
+            className="w-full px-4 py-2 font-bold rounded shadow focus:outline-none focus:ring hover:ring focus:border-lime-500 bg-orange-400 text-gray-900"
           >
             Send
           </button>
         </div>
       </form>
-    </section>
+    </section> 
+  </div>
+    
   );
 };
 
