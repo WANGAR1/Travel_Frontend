@@ -20,9 +20,9 @@ const TravelExperience = () => {
       <h1 className="travel-experience-title">
         <span className="travel-title-highlight">Travel</span> Experiences {/* Highlight "Travel" */}
       </h1>
-      <div className="flex-wrap">
+      <div className="grid grid-cols-4 gap-8">
         {travelExperiences.map((travelItem) => (
-          <div className="card m-4 w-1/3 md:w-1/4" key={travelItem.id}>
+          <div className="card w-full" key={travelItem.id}>
             <div className="image-container">
               <img src={travelItem.image_url} alt={`Image for ${travelItem.title}`} className="rounded-t-lg" />
             </div>
