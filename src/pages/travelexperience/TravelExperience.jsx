@@ -1,44 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import './TravelExperience.css';
+import React from 'react';
+import './TravelExperience.scss';
+import travelData from './travelData'; // Import the data array
 
 const TravelExperience = () => {
-  const [travelExperiences, setTravelExperiences] = useState([]);
-
-  useEffect(() => {
-    fetch('/travel_experiences')
-      .then(response => response.json())
-      .then(data => {
-        setTravelExperiences(data);
-      })
-      .catch(error => {
-        console.error('Error fetching travel experiences:', error);
-      });
-  }, []);
-
   return (
-    <div className="max-w-6xl mx-auto">
-      <h1 className="travel-experience-title">
-        <span className="travel-title-highlight">Travel</span> Experiences {/* Highlight "Travel" */}
-      </h1>
-      <div className="grid grid-cols-4 gap-8">
-        {travelExperiences.map((travelItem) => (
-          <div className="card w-full" key={travelItem.id}>
-            <div className="image-container">
-              <img src={travelItem.image_url} alt={`Image for ${travelItem.title}`} className="rounded-t-lg" />
+    <section className="light">
+      <div className="container py-2" id="cardContainer">
+        <h1 id="Title">Travel Experiences</h1> {/* Page title */}
+        {/* Cards will be generated here */}
+        {travelData.map((experience, index) => (
+          <article className={`postcard light ${experience.color}`} key={index}>
+            <a className="postcard__img_link" href="#">
+              <img className="postcard__img" src={experience.image_url[0]} alt="Image Title" />
+            </a>
+            <div className={`postcard__text t-dark ${experience.image_position}`}>
+              <h1 className="postcard__title">{experience.title}</h1>
+              <p className="postcard__preview-txt">{experience.description}</p>
+              {/* Render other content */}
             </div>
-            <div className="mt-6 mb-2">
-              <h2 className="text-xl font-semibold tracking-wide">
-                {travelItem.title}
-              </h2>
-            </div>
-            <p className="dark:text-black-100">
-              {travelItem.description}
-            </p>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default TravelExperience;
