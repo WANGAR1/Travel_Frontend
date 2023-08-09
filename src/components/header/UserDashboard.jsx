@@ -54,9 +54,9 @@ const UserDashboard = () => {
               <Link to="/signup" className="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-6">
                 Signup
               </Link>
-              <button  className="text-orange-600 text-sm font-semibold border px-3 py-2 rounded-lg hover:text-orange-600 hover:border-orange-600 hover:text-gray-800">
+              <Link to= "/"  className="text-orange-600 text-sm font-semibold border px-3 py-2 rounded-lg hover:text-orange-600 hover:border-orange-600 hover:text-gray-800">
                  Log Out
-              </button>
+              </Link>
 
             </div>
          </div>

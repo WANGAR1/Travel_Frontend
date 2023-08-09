@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './Login.css';
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -15,25 +17,31 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
+  const loginUser = async () => {
+    try {
+      const response = await axios.post('http://localhost:3000/login', {
+        email,
+        password,
+      });
+      console.log('Login Successful:', response.data);
+      setEmail('');
+      setPassword('');
+      navigate('/userdashboard'); // Navigate to UserDashboard after successful login
+    } catch (error) {
+      setError(error.response.data.error);
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform any authentication logic here (e.g., calling an API to validate user credentials)
-    // For this example, we will simulate an error for demonstration purposes
     if (email === '') {
       setError('Email is required.');
     } else if (password === '') {
       setError('Password is required.');
     } else {
-      setError(''); // Clear any previous error
-
-      // Continue with the authentication logic, e.g., calling an API to validate user credentials
-      console.log('Email:', email);
-      console.log('Password:', password);
-
-      // Clear the form fields after successful submission.
-      setEmail('');
-      setPassword('');
+      setError('');
+      loginUser();
     }
   };
 

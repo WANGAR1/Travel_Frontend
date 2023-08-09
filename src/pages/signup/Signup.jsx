@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './Signup.css';
 
 const Signup = () => {
-  const [isLogin, setIsLogin] = useState(false); // State to track if it's a login or signup page
+  const navigate = useNavigate();
+  const [isLogin, setIsLogin] = useState(false);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [userType, setUserType] = useState('traveler'); // State to track user type selection
+  const [userType, setUserType] = useState('traveller');
   const [error, setError] = useState('');
 
   const handleUsernameChange = (event) => {
@@ -26,10 +28,26 @@ const Signup = () => {
     setUserType(event.target.value);
   };
 
+  const signUpUser = async () => {
+    try {
+      const response = await axios.post('http://localhost:3000/users', {
+        username,
+        email,
+        password,
+        role: userType,
+      });
+      console.log('Signup Successful:', response.data);
+      setUsername('');
+      setEmail('');
+      setPassword('');
+      navigate('/userdashboard'); // Navigate to UserDashboard after successful signup
+    } catch (error) {
+      setError(error.response.data.error);
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform any signup logic here (e.g., calling an API to register the user)
-    // For this example, we will simulate an error for demonstration purposes
     if (username === '') {
       setError('Username is required.');
     } else if (email === '') {
@@ -37,22 +55,14 @@ const Signup = () => {
     } else if (password === '') {
       setError('Password is required.');
     } else {
-      setError(''); // Clear any previous error
-      // Continue with the signup logic, e.g., calling an API to register the user
-      console.log('Username:', username);
-      console.log('Email:', email);
-      console.log('Password:', password);
-      console.log('User Type:', userType);
-      // Clear the form fields after successful submission.
-      setUsername('');
-      setEmail('');
-      setPassword('');
+      setError('');
+      signUpUser();
     }
   };
 
   const handleToggle = () => {
-    setError(''); // Clear any previous error when toggling
-    setIsLogin((prevState) => !prevState); // Toggle between login and signup
+    setError('');
+    setIsLogin((prevState) => !prevState);
   };
 
   return (
@@ -92,7 +102,7 @@ const Signup = () => {
           <br />
           {/* Add the user type selection drop-down */}
           <select name="userType" value={userType} onChange={handleUserTypeChange}>
-            <option value="traveler">Traveller</option>
+            <option value="traveller">Traveller</option>
             <option value="tour-operator">Tour Operator</option>
           </select>
           <br />
@@ -102,7 +112,7 @@ const Signup = () => {
         </form>
         <br />
         <p>
-          {isLogin ? 'Don\'t have an account? ' : 'Already have an account? '}
+          {isLogin ? "Don't have an account? " : 'Already have an account? '}
           <Link to={isLogin ? '/signup' : '/login'} onClick={handleToggle}>
             {isLogin ? 'Sign Up' : 'Login'}
           </Link>

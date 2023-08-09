@@ -24,6 +24,7 @@ import ResourceCenter from './components/footer/ResourceCenter';
 import Blog from './components/footer/Blog';
 import Testimonial from './components/footer/Testimonial';
 import ReviewsForm from './components/reviewsform/ReviewsForm';
+import UserDashboard from './components/header/UserDashboard';
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/contacts" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/userdashboard" element={<UserDashboard />} />
         <Route path="/bookingform" element={<BookingForm />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/cookie" element={<CookieDeclaration />} />
