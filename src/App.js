@@ -23,8 +23,8 @@ import ResourceCenter from './components/footer/ResourceCenter';
 import Blog from './components/footer/Blog';
 import Testimonial from './components/footer/Testimonial';
 import ReviewsForm from './components/reviewsform/ReviewsForm';
-import UserDashboard from './components/header/UserDashboard';
-
+import UserDashboard from './components/header/UserDashboard'; 
+import UserProfile from './pages/userprofile/UserProfile';
 
 
 
@@ -56,6 +56,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/testimonials" element={<Testimonial />} />
         <Route path="/reviewsform" element={<ReviewsForm/>} />
+        <Route path="/profile" element={<UserProfile />} />
         {/* Add a 404 route if no match is found */}
         <Route path="*" element={<h1>404 - Not Found</h1>} />
       </Routes>

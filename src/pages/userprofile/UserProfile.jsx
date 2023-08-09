@@ -1,7 +1,5 @@
-// UserProfile.js
 
 import React, { useState, useEffect } from 'react';
-import InfoCard from './InfoCard.jsx'; // Import the InfoCard component
 import './UserProfile.css'; // Import the CSS file
 
 const UserProfile = () => {
@@ -39,7 +37,7 @@ const UserProfile = () => {
       </div>
       {userData ? (
         <>
-          <InfoCard /> {/* Use the InfoCard component */}
+
           <div className="user-profile-fields">
             <div className="field">
               <label>First Name:</label>
@@ -62,9 +60,6 @@ const UserProfile = () => {
       ) : (
         <p>Loading user data...</p>
       )}
-      <div className="logout-button" onClick={handleLogout}>
-        Logout
-      </div>
     </div>
   );
 };
