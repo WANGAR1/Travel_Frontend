@@ -30,7 +30,7 @@ const Login = () => {
       // console.log('Login Successful:', response.data);
       setEmail('');
       setPassword('');
-      navigate('/userdashboard'); // Navigate to UserDashboard after successful login
+      navigate('/userlayout'); // Navigate to UserDashboard after successful login
     } catch (error) {
       setError(error.response.data.error);
     }

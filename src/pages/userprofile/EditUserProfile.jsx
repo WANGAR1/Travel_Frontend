@@ -26,7 +26,7 @@ const EditUserProfile = ({ userData }) => {
     })
     .then(response => {
       setSuccessMessage('Profile updated successfully');
-      setEditedUserData(response.data); // Update edited user data with the response
+      setEditedUserData({}); 
       setIsLoading(false);
     })
     .catch(error => {
