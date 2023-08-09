@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Travel Trove Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Travel Trove Frontend repository. This project is the frontend component of the Travel Trove application, built using Create React App.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+These instructions will help you set up and run the Travel Trove Frontend on your local machine.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (Install it from [nodejs.org](https://nodejs.org/))
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone git@github.com:WANGAR1/Travel_Frontend.git
+2. Navigate to the project directory:
+   ```bash
+   cd travel-trove-frontend
+3. Install dependencies:
+   ```bash
+   npm install
+## Usage
+To start the development server and run the Travel Trove Frontend:
+  
+To launch the app in your default web browser, you need to ```npm start```. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The development server will automatically reload if you make changes to the code.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Documentation
+For detailed information about API endpoints, request parameters, response formats, and example requests, please refer to the Travel Trove Backend API Documentation found [here](https://github.com/WanjaNjunge/travel-backend/blob/main/README.md). The documentation provides comprehensive details to help you interact with the backend API effectively.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Our heartfelt gratitude goes out to the members of Group 1 who have contributed their talents and efforts to the Travel Trove Frontend project:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Najma Thande**
+  - Role: Designer, Developer
+  - Contribution: Najma brought her creative design skills to the table, crafting visually appealing user interfaces that enhance the overall user experience. Additionally, she actively participated in the development process, coding and implementing the frontend features.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Ann Wangui**
+  - Role: Developer, Designer
+  - Contribution: Ann's dual role as a developer and designer greatly enriched the project. Her coding skills ensured the functionality of the front end, while her design expertise added elegance to the user interface through the creation of an impeccable Figma Design at the start of the project.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Denis Kipkemoi**
+  - Role: Developer
+  - Contribution: Denis played a crucial role in the development of the front end, bringing his coding expertise to create smooth and efficient user interactions.
 
-## Learn More
+- **Wangari Samantha**
+  - Role: Scrum Master, Developer
+  - Contribution: Samantha took on the role of Scrum Master, guiding the team with her exceptional organizational and leadership skills. As a developer, she also contributed to the coding and implementation of front-end features.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Stephanie Wanja**
+  - Role: Developer
+  - Contribution: Stephanie's dedication as a developer ensured the successful integration of the front-end and [TravelTrove Backend](https://github.com/WanjaNjunge/travel-backend), contributing to the project's functionality and user experience.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Their dedicated involvement, each with their unique roles, has been pivotal in bringing the Travel Trove Frontend to life.
 
-### Code Splitting
+We welcome contributions from the community! If you'd like to contribute to Travel Trove, please follow these steps:
+1. Fork the repository and create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+2. Make your changes, add tests if applicable, and commit:
+   ```bash
+   git commit -m "Add your commit message here"
+3. Push your branch to your forked repository:
+   ```bash
+   git push origin feature/your-feature-name
+4. Create a pull request from your branch to the main repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For major changes or feature additions, it's recommended to open an issue first to discuss the changes you'd like to make.
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   
