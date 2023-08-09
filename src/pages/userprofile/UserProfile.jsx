@@ -1,27 +1,29 @@
-
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './UserProfile.css'; // Import the CSS file
+import EditUserProfile from './EditUserProfile';
 
 const UserProfile = () => {
   const [userData, setUserData] = useState(null);
+  const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
-    // Fetch user data from the backend API and set it to the state
-    // Replace this with your actual API call to get user data
-    // For example: fetchUserDataFromBackend(userId).then((data) => setUserData(data));
-    const fakeUserData = {
-      firstName: 'John',
-      lastName: 'Doe',
-      username: 'johndoe123',
-      email: 'johndoe@example.com',
-    };
-    setUserData(fakeUserData);
+    // Fetch the user's data using the auto_login endpoint
+    axios.get('/auto_login', {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`, // Replace with your token storage method
+      },
+    })
+    .then(response => {
+      setUserData(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching user data:', error);
+    });
   }, []);
 
   const handleEditProfile = () => {
-    // Redirect to the user profile form
-    // Replace '/edit-profile' with the actual URL for the edit profile page
-    window.location.href = '/edit-profile';
+    setIsEditMode(true);
   };
 
   const handleLogout = () => {
@@ -31,22 +33,20 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="user-profile-container">
-      <div className="edit-button" onClick={handleEditProfile}>
-        Edit
-      </div>
-      {userData ? (
-        <>
 
-          <div className="user-profile-fields">
-            <div className="field">
-              <label>First Name:</label>
-              <p>{userData.firstName}</p>
+    
+      <div className="user-profile-container">
+        {!userData ? (
+        <p>Loading user data...</p>
+      ) : (
+        <>
+          {!isEditMode ? (
+          <>
+            <div className="edit-button" onClick={handleEditProfile}>
+              Edit
             </div>
-            <div className="field">
-              <label>Last Name:</label>
-              <p>{userData.lastName}</p>
-            </div>
+
+            <div className="user-profile-fields">
             <div className="field">
               <label>Username:</label>
               <p>{userData.username}</p>
@@ -56,11 +56,18 @@ const UserProfile = () => {
               <p>{userData.email}</p>
             </div>
           </div>
-        </>
-      ) : (
-        <p>Loading user data...</p>
+          </>
+        ) : (
+          <EditUserProfile userData={userData} />
+        )}
+          </>
       )}
-    </div>
+          
+        
+      </div>
+    
+
+
   );
 };
 

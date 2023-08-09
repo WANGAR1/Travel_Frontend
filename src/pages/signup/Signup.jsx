@@ -36,7 +36,11 @@ const Signup = () => {
         password,
         role: userType,
       });
-      console.log('Signup Successful:', response.data);
+      const token = response.data.token;
+
+    // Store the token in localStorage
+    localStorage.setItem('token', token);
+      // console.log('Signup Successful:', response.data);
       setUsername('');
       setEmail('');
       setPassword('');
@@ -103,7 +107,7 @@ const Signup = () => {
           {/* Add the user type selection drop-down */}
           <select name="userType" value={userType} onChange={handleUserTypeChange}>
             <option value="traveller">Traveller</option>
-            <option value="tour-operator">Tour Operator</option>
+            <option value="tour_operator">Tour Operator</option>
           </select>
           <br />
           {error && <div style={{ color: 'red' }}>{error}</div>}

@@ -23,7 +23,11 @@ const Login = () => {
         email,
         password,
       });
-      console.log('Login Successful:', response.data);
+      const token = response.data.token;
+
+    // Store the token in localStorage
+    localStorage.setItem('token', token);
+      // console.log('Login Successful:', response.data);
       setEmail('');
       setPassword('');
       navigate('/userdashboard'); // Navigate to UserDashboard after successful login
