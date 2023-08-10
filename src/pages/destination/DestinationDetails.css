@@ -1,0 +1,77 @@
+/* DestinationDetails component styles */
+
+.destination-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .destination-title {
+    font-size: 28px;
+    color: #FA7436;
+    margin-bottom: 10px;
+  }
+  
+  .packages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .package-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .package-card img {
+    width: 100%; /* Allow images to take full width of the card */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .package-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .package-card p {
+    margin-bottom: 10px;
+  }
+  
+  .book-now-button,
+  .reviews-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #FA7436;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-now-button:hover,
+  .reviews-button:hover {
+    background-color: #E65A1E;
+  }
+  
+  /* Additional styles for Reviews button */
+  .reviews-button {
+    margin-left: 10px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .package-card {
+      width: 90%;
+    }
+}

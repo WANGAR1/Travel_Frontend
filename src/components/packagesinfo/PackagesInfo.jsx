@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom';
 const PackageInfo = ({ travelPackage }) => {
   return (
     <div className="card border-2 border-gray-300 shadow-md rounded-lg p-7 bg-white">
+     <div className="image-container flex items-center justify-center w-full h-60 rounded-full overflow-hidden mx-auto">
+  <img 
+    src={travelPackage.image_url} 
+    alt={`Image for ${travelPackage.name}`} 
+    className="object-cover max-w-full max-h-full rounded-full" /> {/* Add your image styling classes here */}
+</div>
+
+
+
       <h2 className="text-6xl font-semibold mb-2">{travelPackage.name}</h2>
       <p className="text-3xl text-orange-600 mb-1">Location: {travelPackage.destination.location}</p>
       <p className="mb-3">{travelPackage.description}</p>

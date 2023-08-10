@@ -35,6 +35,7 @@ import UserPackages from './components/header/UserPackages';
 import UserDestinations from './components/header/UserDestinations';
 import AboutLanding from './pages/landing/AboutLanding';
 import PackagesDestails from './components/packagesinfo/PackagesDetails';
+import Reviews from './pages/reviews/Reviews';
 
 
 
@@ -59,6 +60,7 @@ const App = () => {
         <Route path="/contacts" element={<Contact />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/reviews" element={<Reviews />} />
         <Route path="/userdashboard" element={<UserDashboard />} />
         <Route path="/bookingform" element={<BookingForm />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />

@@ -22,7 +22,7 @@ const Reviews = () => {
       >
         Add Reviews
       </Link>
-      <div className="container flex flex-col w-full max-w-lg p-6 mx-auto mt-16 divide-y rounded-md divide-gray-700 bg-gray-900 text-gray-100 relative">
+      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6 mx-auto mt-16 bg-gray-200 rounded-md shadow-lg">
         
         {/* Using a wrapping div */}
         {reviews.map((review, index) => (
@@ -30,17 +30,17 @@ const Reviews = () => {
             <div className="flex justify-between items-center p-4">
               <div className="flex space-x-4">
                 <div>
-                  <h4 className="font-bold text-3xl">{review.name}</h4>
+                  <h4 className="font-bold text-3xl text-black">{review.name}</h4>
                 </div>
               </div>
               <div className="flex items-center space-x-2 text-yellow-500">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
                   <path d="M448 192h-46.83L256 19.39 110.83 192H64l144 124.27L100.52 448l155.48-114.27L411.48 448 320 316.27 448 192z" />
                 </svg>
-                <span className="text-xl font-bold">{review.rating}</span>
+                <span className="text-xl font-bold text-black">{review.rating}</span>
               </div>
             </div>
-            <div className="p-4 space-y-2 text-sm text-gray-400">
+            <div className="p-4 space-y-2 text-sm text-gray-700">
               {review.comment}
             </div>
           </div>
