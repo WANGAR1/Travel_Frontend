@@ -68,7 +68,7 @@ const DestinationDetails = () => {
             Booking Status: {travelPackage.booking_status}
           </p>
           <Link
-            to="/bookingform"
+            to={`/bookingform?packageId=${travelPackage.id}`}
             className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600"
           >
             Book Now
