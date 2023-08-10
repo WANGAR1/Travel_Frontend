@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import './BookingForm.css'
-
+import { useLocation } from 'react-router-dom';
+import './BookingForm.css';
 const BookingForm = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const packageId = searchParams.get('packageId');
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -10,16 +13,14 @@ const BookingForm = () => {
     no_of_people: '',
     check_in_date: '',
     check_out_date: '',
+    travel_package_id: packageId, // Include the package ID in the form data
   });
-
   const [bookingStatus, setBookingStatus] = useState(null);
   const [bookingMessage, setBookingMessage] = useState('');
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -30,27 +31,25 @@ const BookingForm = () => {
         },
         body: JSON.stringify(formData),
       });
-
       const data = await response.json();
       if (response.ok) {
         setBookingStatus('success');
-        setBookingMessage('Booking successful!'); // Set success message
+        setBookingMessage('Booking successful!');
       } else if (response.status === 401) {
         setBookingStatus('error');
-        setBookingMessage('You are not authorized to perform this action.'); // Unauthorized error
+        setBookingMessage('You are not authorized to perform this action.');
       } else if (response.status === 422) {
         setBookingStatus('error');
-        setBookingMessage('Validation failed. Please check your input.'); // Validation error
+        setBookingMessage('Validation failed. Please check your input.');
       } else {
         setBookingStatus('error');
-        setBookingMessage('Booking failed. Please try again.'); // Set error message
+        setBookingMessage('Booking failed. Please try again.');
       }
     } catch (error) {
       setBookingStatus('error');
-      setBookingMessage('An error occurred. Please try again.'); // Set error message
+      setBookingMessage('An error occurred. Please try again.');
     }
   };
-
   return (
     <div className="booking-form">
       <h2>Booking Form</h2>
@@ -61,7 +60,7 @@ const BookingForm = () => {
         <p className="booking-error">{bookingMessage}</p>
       )}
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
+      <div className="form-group">
           <label>First Name</label>
           <input type="text" name="first_name" value={formData.first_name} onChange={handleChange} required />
         </div>
@@ -94,5 +93,4 @@ const BookingForm = () => {
     </div>
   );
 };
-
 export default BookingForm;

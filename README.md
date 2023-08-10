@@ -30,12 +30,21 @@ These instructions will help you set up and run the Travel Trove Frontend on you
    ```bash
    cd travel-trove-frontend
 3. Install dependencies:
-   ```bash
+  ```bash
+   npm install
+
+   
    npm install @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons
+
    ```bash
    npm install react-masonry-css
+
    ```bash
    npm install bootstrap
+
+   ```bash
+   npm install react router dom
+
    ```bash
    npm install axios
 
