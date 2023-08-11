@@ -1,0 +1,13 @@
+/* Center the heading */
+.profile-heading {
+    text-align: center;
+    font-family: 'YourPreferredFont', sans-serif; /* Replace 'YourPreferredFont' with your desired font-family */
+    font-size: 2.0rem; /* Set the font size to 2.5 rem (adjust as needed) */
+    font-weight: bold; /* Set the font weight to bold */
+  }
+  
+  /* Style the 'Us' in 'About Us' */
+  .profile-heading span {
+    color: #fa7436; /* Orange color */
+  }
+  

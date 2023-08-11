@@ -70,7 +70,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className='signup-container'>
       <br />
       <br />
       <div id="signup_form">

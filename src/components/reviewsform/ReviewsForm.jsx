@@ -1,28 +1,62 @@
 import React, { useState } from 'react';
-import './ReviewsForm.css'; 
+import { useLocation } from 'react-router-dom';
+import './ReviewsForm.css';
 
 const ReviewsForm = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const packageId = searchParams.get('packageId');
   const [formData, setFormData] = useState({
     name: '',
     comment: '',
     rating: '',
+    travel_package_id: packageId,
   });
-
+  const [reviewStatus, setReviewStatus] = useState(null);
+  const [reviewMessage, setReviewMessage] = useState('');
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can perform any validation or submit the form to a backend here
-    console.log(formData);
+    try {
+      const response = await fetch('/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setReviewStatus('success');
+        setReviewMessage('Review successful!');
+      } else if (response.status === 401) {
+        setReviewStatus('error');
+        setReviewMessage('You are not authorized to perform this action.');
+      } else if (response.status === 422) {
+        setReviewStatus('error');
+        setReviewMessage('Validation failed. Please check your input.');
+      } else {
+        setReviewStatus('error');
+        setReviewMessage('Review failed. Please try again.');
+      }
+    } catch (error) {
+      setReviewStatus('error');
+      setReviewMessage('An error occurred. Please try again.');
+    }
   };
-
   return (
     <div className='reviews-container'>
-        <div className="reviews-form">
+          <div className="reviews-form">
       <h2>Write a Review</h2>
+      {reviewStatus === 'success' && (
+        <p className="review-success">{reviewMessage}</p>
+      )}
+      {reviewStatus === 'error' && (
+        <p className="review-error">{reviewMessage}</p>
+      )}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Name</label>
@@ -51,12 +85,11 @@ const ReviewsForm = () => {
             <option value="1">1 Star</option>
           </select>
         </div>
-        <button className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600" type="submit">Submit Review</button>
+        <button type="submit" className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600">Submit Review</button>
       </form>
     </div>
     </div>
     
   );
 };
-
 export default ReviewsForm;

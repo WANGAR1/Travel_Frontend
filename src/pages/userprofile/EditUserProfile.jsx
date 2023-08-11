@@ -37,7 +37,9 @@ const EditUserProfile = ({ userData }) => {
 
   return (
     <div className="edit-user-profile-container">
-      <h2>Edit Profile</h2>
+      <h1 className="profile-heading">
+               Edit <span>Profile</span>
+            </h1>
       {successMessage && <p className="success-message">{successMessage}</p>}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       <div className="edit-user-profile-fields">
@@ -69,7 +71,7 @@ const EditUserProfile = ({ userData }) => {
             />
         </div>
       </div>
-      <button onClick={handleUpdateProfile} disabled={isLoading}>
+      <button className=" px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600" onClick={handleUpdateProfile} disabled={isLoading}>
         {isLoading ? 'Updating...' : 'Save Changes'}
       </button>
     </div>

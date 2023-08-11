@@ -13,12 +13,7 @@ const DestinationDetails = () => {
       .then(response => response.json())
       .then(data => {
 
-         // Parse the itinerary from JSON string to an array
-      data.travel_packages.forEach(travelPackage => {
-        if (typeof travelPackage.itinerary === 'string') {
-          travelPackage.itinerary = JSON.parse(travelPackage.itinerary);
-        }})
-
+        
         setDestinationDetails(data); // Data structure matches the provided API response
       })
       .catch(error => {

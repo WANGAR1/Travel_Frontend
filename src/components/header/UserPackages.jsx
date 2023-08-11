@@ -1,13 +1,13 @@
 import React from "react";
-import Packages from "../../pages/packages/Packages";
 import UserDashboard from "./UserDashboard";
+import DestinationDetails from "../../pages/destination/DestinationDetails";
 
 function UserPackages() {
   
   return (
     <div>
       <UserDashboard />
-      <Packages />
+      <DestinationDetails/>
     </div>
     );
     }

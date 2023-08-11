@@ -34,23 +34,26 @@ const UserProfile = () => {
   };
 
   return (
-         <div>
-          <div>
-            <UserDashboard />
-          </div>
-
-      <div className="user-profile-container">
+  <div>
+    <div>
+     <UserDashboard />
+    </div>
+    <div className='profile-container'>
+    <div className="user-profile-container">
         {!userData ? (
         <p>Loading user data...</p>
       ) : (
         <>
           {!isEditMode ? (
           <>
-            <div className="edit-button" onClick={handleEditProfile}>
+            <div className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600" onClick={handleEditProfile}>
               Edit
             </div>
 
             <div className="user-profile-fields">
+            <h1 className="profile-heading">
+               My <span>Profile</span>
+            </h1>
             <div className="field">
               <label>Username:</label>
               <p>{userData.username}</p>
@@ -69,7 +72,8 @@ const UserProfile = () => {
           
         
       </div>
-         </div>     
+    </div>  
+  </div>     
   );
 };
 

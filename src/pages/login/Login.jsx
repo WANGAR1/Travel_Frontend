@@ -50,7 +50,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className='login-container'>
       <br />
       <br />
       <div id="login_form">

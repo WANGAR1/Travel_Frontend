@@ -1,6 +1,10 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #d6d6db;
+.login-container {
+  background-image: url('https://www.chasingthedonkey.com/wp-content/uploads/2021/04/Cleopatra-beach_Turkey_Cleopatra-Island_Depositphotos_265905366_s-2019.jpeg'); /* Replace with the actual path to your background image */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
 }
 
 .background {
