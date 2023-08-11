@@ -31,9 +31,9 @@ const DestinationDetails = () => {
   }
 
   return (
-    <div className='page-container'>
-        
-           <div className="packages-container flex flex-col items-center">
+<div className='page-container'>
+  <div className='page-content'>
+    <div className="packages-container flex flex-col items-center">
     {destinationDetails.travel_packages.map((travelPackage) => (
       <div className="package-card mb-5" key={travelPackage.id}><div className="image-container">
             <img
@@ -68,7 +68,7 @@ const DestinationDetails = () => {
             Booking Status: {travelPackage.booking_status}
           </p>
           <Link
-            to={`/bookingform?packageId=${travelPackage.id}`}
+            to="/bookingform"
             className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600"
           >
             Book Now
@@ -82,7 +82,8 @@ const DestinationDetails = () => {
         </div>
       ))}
     </div>
-    </div>
+  </div>
+</div>
   );
 };
 

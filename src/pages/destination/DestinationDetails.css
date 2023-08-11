@@ -1,5 +1,15 @@
 /* DestinationDetails component styles */
 
+/*.page-container{
+  background-image: url('https://www.travelguru.com/holiday-packages/images/goa.jpg'); 
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  min-height: 100vh;
+}*/
+
 .destination-container {
     text-align: center;
     padding: 20px;
@@ -12,11 +22,11 @@
   }
   
   .packages-container {
+    background-color: white; /* Set the background color to white */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    padding: 20px;
   }
   
   .package-card {

@@ -1,53 +1,63 @@
+.reviews-container {
+  background-image: url('https://www.travelandleisure.com/thmb/3tWYJuG9aRBu-ByiH5eNaqkEjG0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/navagio-shipwreck-beach-zakynthos-greece-WHITESAND1017-79e2467bf28e4553abf09dc9e312d7d9.jpg'); /* Replace with the actual path to your background image */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
 .reviews-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .reviews-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #FA7436;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #FA7436;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  background-color: #fff; /* Set background color to solid white */
+}
+.reviews-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #FA7436;
+  font-weight: bold; /* Add font-weight property */
+  font-size: 24px; /* Add font-size property */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #FA7436;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

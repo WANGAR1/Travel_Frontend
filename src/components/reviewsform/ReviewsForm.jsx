@@ -20,7 +20,8 @@ const ReviewsForm = () => {
   };
 
   return (
-    <div className="reviews-form">
+    <div className='reviews-container'>
+        <div className="reviews-form">
       <h2>Write a Review</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -50,9 +51,11 @@ const ReviewsForm = () => {
             <option value="1">1 Star</option>
           </select>
         </div>
-        <button type="submit">Submit Review</button>
+        <button className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600" type="submit">Submit Review</button>
       </form>
     </div>
+    </div>
+    
   );
 };
 

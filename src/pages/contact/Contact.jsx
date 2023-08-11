@@ -45,6 +45,8 @@ const Contact = () => {
     <div>
       <Header />
     </div>
+    <div className='contact-container'>
+       
       <section className="p-6 text-gray-900">
       <form onSubmit={handleSubmit} noValidate className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow bg-white">
         <h2 className="w-full text-3xl font-bold leading">Contact us</h2>
@@ -107,6 +109,7 @@ const Contact = () => {
         </div>
       </form>
     </section> 
+    </div>
   </div>
     
   );

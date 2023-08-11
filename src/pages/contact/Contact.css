@@ -1,3 +1,12 @@
+.contact-container{
+  background-image: url('https://www.charlottemagazine.com/content/uploads/2019/08/5_couple-relaxing-1024x574.jpg'); /* Replace with the actual path to your background image */
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
 .p-6 {
     padding: 1.5rem;
   }
