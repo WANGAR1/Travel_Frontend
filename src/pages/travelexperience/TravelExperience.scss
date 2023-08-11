@@ -14,6 +14,7 @@ $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
     font-size: 28px;
     color: #fa7436;
     margin-bottom: 10px;
+    font-weight: bold;
   }
 
 body {
@@ -57,7 +58,7 @@ a, a:hover {
   position: relative;
 
 	&.dark {
-		background-color: #18151f;
+		background-color: #9788b7;
 	}
 	&.light {
 		background-color: #e1e5ea;

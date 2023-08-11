@@ -25,8 +25,8 @@ const Login = () => {
       });
       const token = response.data.token;
 
-    // Store the token in localStorage
-    localStorage.setItem('token', token);
+      // Store the token in localStorage
+      localStorage.setItem('token', token);
       // console.log('Login Successful:', response.data);
       setEmail('');
       setPassword('');
@@ -81,7 +81,8 @@ const Login = () => {
         </form>
         <br />
         <p>
-          Don't have an account? <Link to="/signup">Sign up here</Link>
+          Don't have an account?
+          <Link to="/signup"> Sign up here</Link>
         </p>
       </div>
     </div>
