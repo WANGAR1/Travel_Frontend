@@ -27,11 +27,6 @@ const UserProfile = () => {
     setIsEditMode(true);
   };
 
-  const handleLogout = () => {
-    // Perform logout logic here
-    // For example: clear user session and redirect to the login page
-    // logoutUser().then(() => window.location.href = '/login');
-  };
 
   return (
   <div>
