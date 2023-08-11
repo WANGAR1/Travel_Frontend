@@ -51,7 +51,8 @@ const BookingForm = () => {
     }
   };
   return (
-    <div className="booking-form">
+    <div className="booking-container">
+      <div className="booking-form">
       <h2>Booking Form</h2>
       {bookingStatus === 'success' && (
         <p className="booking-success">{bookingMessage}</p>
@@ -88,9 +89,11 @@ const BookingForm = () => {
           <label>Check-out Date</label>
           <input type="date" name="check_out_date" value={formData.check_out_date} onChange={handleChange} required />
         </div>
-        <button type="submit">Book Now</button>
+        <button type="submit" className="inline-block px-4 py-2 bg-orange-500 text-white rounded hover:bg-lime-600">Book Now</button>
       </form>
     </div>
+   </div>
+    
   );
 };
 export default BookingForm;
