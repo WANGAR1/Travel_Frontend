@@ -1,8 +1,8 @@
 {
-  "name": "travel-frontend",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://travel-backend1.onrender.com",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
